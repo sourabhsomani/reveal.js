@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Gitcoin - Reputation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +25,119 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					Reputation System
+				</section>
+				<section>
+					<p>The Need</p>
+					<ul class="small">
+						<li class="fragment fade-in">Intrinsic Motivation</li>
+						<li class="fragment fade-in">Self Regulated Community</li>
+						<li class="fragment fade-in">Lesser Bad Actors</li>
+					</ul>
+					<p class="small fragment fade-in">This == Well informed Users + Lesser Backlash at Gitcoin</p>
+				</section>
+				<section>
+					<section>
+						<p>Current System - Issues</p>
+					</section>
+					<section>
+						<p>Funder</p>
+						<ul class="small">
+							<li class="fragment fade-in">Scope/Feature creep</li>
+							<li class="fragment fade-in">Requirements keep changing</li>
+						</ul>
+					</section>
+					<section>
+						<p>Hunter</p>
+						<ul class="small">
+							<li class="fragment fade-in">Half decent job</li>
+							<li class="fragment fade-in">Frequent abandonments</li>
+						</ul>
+					</section>
+					<section>
+						<p>Funder and Hunter</p>
+						<ul class="small">
+							<li class="fragment fade-in">Unresponsive to the other party</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>DOTA - How Bans Affect Reputation</p>
+						<img style="width: 300px; border: none" src="img/dota.jpg"/>
+						<p class="small fragment fade-in">Bans happen when a player: </p>
+						<ul class="small">
+							<li class="fragment fade-in">Abandon matches</li>
+							<li class="fragment fade-in">Gets reported by fellow players</li>
+						</ul>
+					</section>
+					<section>
+						<p>Punishments</p>
+						<ul class="fragment fade-in small">
+							<li>The more offenses, the longer the ban.</li>
+							<li>Ban time escalates each time a consecutive ban is issued</li>
+							<li>Escalation time resets after an unknown period of good behavior</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>A Potentinal Solution For Gitcoin</p>
+						<ul class="small">
+							<li class="fragment fade-in">Every user has a funder + contributor karma (2 scores)</li>
+							<li class="fragment fade-in">Each bad behavior by the user results in penalization</li>
+							<li class="fragment fade-in">Automated (less weightage) & user initiated</li>
+						</ul>
+					</section>
+					<section>
+						<p>When Does Reputation Drop?</p>
+						<ul class="small">
+							<li class="fragment fade-in">When funder/hunter isn't responsive</li>
+							<li class="fragment fade-in">Delay in payments + Scope/Feature creep</li>
+							<li class="fragment fade-in">Work is mediocre</li>
+						</ul>
+					</section>
+					<section>
+						<p>Low Reputation means</p>
+						<ul class="small">
+							<li class="fragment fade-in">
+								Less likely their issue will be picked up / issue will be assigned to them.
+							</li>
+							<li>
+								<p class="fragment fade-in">New User / Users with reputation >= 75% </br> Sees an Issue -> Start Work -> (Faucet Request) -> Submit -> Get Payout</p>
+								<p class="fragment fade-in">Old Users with reputation 45 - 75% </br> Sees an Issue -> Can select after ban. Lesser the % longer the ban duration</p>
+								<p class="fragment fade-in">Old Users with reputation <= 45% </br> Can start work only after ban + will have to deposit a 10% (y$) of the issue bounty(x$) as collateral</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p>If the user has poor reputation and is starts work</p>
+							<ul class="small">
+								<li class="fragment fade-in">Happy Path: Successfull completion == y$ + x$</li>
+								<li class="fragment fade-in">
+										Abandonment: x$ can be either sent to gitcoin / the funder (for the inconvience) / can be split btwn the two.
+								</li>
+								<li class="fragment fade-in">
+									1st makes us look money minded.
+									<br>2nd might lead to a situation where funder might game the system by targeting users with low reputation to make money.				
+								</li>
+								<li class="fragment fade-in">
+									User will be able to escalate this with a period of N days if they feel they've been done wrong by upon which core team reviews it
+								</li>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p class="fragment fade-in">Factors that Affect the Reputation</p>
+						<ul class="small">
+							<li class="fragment fade-in">Every offenses carries a diff weightage which affects the reputation</li>
+							<li class="fragment fade-in">Every time a user completes a bounty / payment is triggered, reputation increases</li>
+							<li class="fragment fade-in">Rating given by user at the end of the bounty.</li>
+							<li class="fragment fade-in">Delayed Payout & Abdandoments</li>	
+						</ul>
+					</section>
+				</section>
 			</div>
 		</div>
 
